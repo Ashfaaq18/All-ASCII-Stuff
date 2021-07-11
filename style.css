@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 body {
 	background-color: rgb(33, 33, 33);
 }
 h1 {
 	color: rgb(255, 99, 71);
 	text-align: center;
-	font-size:30px
+	font-size:30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
 }
 
 h2 {
 	color: rgb(202, 213, 226);
-	font-size:17px
+	font-size:20px;
+	margin: 50px auto auto 70px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
 }
 
 p {
@@ -91,31 +98,33 @@ p {
 
 /* ------------------ ASCII Table -------------- */
 #ASCIItable {
-  font-family: Helvetica;
+  
   border-collapse: collapse;
   width: 90%;
   margin: 50px auto 50px auto;
   font-size:15px;
 }
 
-#ASCIItable td, #ASCIItable th {
-  border: 1px solid #ddd;
-  padding: 8px;
+#ASCIItable th {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	border: 1px solid #ddd;
+	background-color: #c99457;
+	color: #291d12;
+}
+
+#ASCIItable td{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	border: 1px solid #ddd;
+	padding: 8px;
 }
 
 #ASCIItable tr:nth-child(even){background-color: #303030;}
 
 #ASCIItable tr:hover {background-color: #663737;}
 
-#ASCIItable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #c99457;
-  color: #291d12;
-}
 
-#ASCIItitle th {
-	text-align: center;
-	color: black;
-}

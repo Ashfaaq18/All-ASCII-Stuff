@@ -5,13 +5,11 @@
 		<script src="resources/ASCIItable.js"></script> 
 		<script src="myScript.js"></script>
 		<link rel="stylesheet" href="style.css">
-		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<title>All ASCII Stuff</title>
 			
 			<h1>All ASCII Stuff</h1>
 			
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 			<div class="topnav" id="myTopnav">
 			  <a class="active" href="index.html">ASCII Table</a>
 			  <a href="art.html">ASCII Art Generator</a>
@@ -23,8 +21,13 @@
 			</div>
 	</head>
 	
-	<body onload="tableFromJson();">
-		<p id="showData" >sa</p>
+	<body onload="
+	tableFromJson(ASCIIcontrolData, 'showControlData');
+	tableFromJson(ASCIIprintableData, 'showPrintableData');">
+		<h2> Control code ASCII</h2>
+		<p id="showControlData"></p>
+		<h2> Printable code ASCII</h2>
+		<p id="showPrintableData"></p>
 	</body>
 
 </html>
