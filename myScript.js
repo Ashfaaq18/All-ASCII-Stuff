@@ -1,6 +1,3 @@
-
-var content = document.querySelector('link[rel="import"]').import;
-
 function mainTabs(a) {
 	
 	switch(a.href){
