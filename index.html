@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="myScript.js"></script>
 		<link rel="stylesheet" href="style.css">
 		<title>All ASCII Stuff</title>
-		
+			
 			<h1>All ASCII Stuff</h1>
 			
-			<ul>
-			  <li><a class="active" href="index.html">ASCII Table</a></li>
-			  <li><a href="art.html">ASCII Art Generator</a></li>
-			  <li><a href="draw.html">ASCII FreeHand Draw</a></li>
-			  <li style="float:right"><a href="about.html">About</a></li>
-			</ul>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<div class="topnav" id="myTopnav">
+			  <a class="active" href="index.html">ASCII Table</a>
+			  <a href="art.html">ASCII Art Generator</a>
+			  <a href="draw.html">ASCII FreeHand Draw</a>
+			  <a class="about" href="about.html">About</a>
+			  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			  </a>
+			</div>
 	</head>
 	
 	<body>
 
 		<p id="content">table page</p>
+		
+		<table>
+		  <tr>
+			<th>Company</th>
+			<th>Contact</th>
+			<th>Country</th>
+		  </tr>
+		  <tr>
+			<td>Alfreds Futterkiste</td>
+			<td>Maria Anders</td>
+			<td>Germany</td>
+		  </tr>
+		  <tr>
+			<td>Centro comercial Moctezuma</td>
+			<td>Francisco Chang</td>
+			<td>Mexico</td>
+		  </tr>
+		  <tr>
+			<td>Ernst Handel</td>
+			<td>Roland Mendel</td>
+			<td>Austria</td>
+		  </tr>
+		  <tr>
+			<td>Island Trading</td>
+			<td>Helen Bennett</td>
+			<td>UK</td>
+		  </tr>
+		  <tr>
+			<td>Laughing Bacchus Winecellars</td>
+			<td>Yoshi Tannamuri</td>
+			<td>Canada</td>
+		  </tr>
+		  <tr>
+			<td>Magazzini Alimentari Riuniti</td>
+			<td>Giovanni Rovelli</td>
+			<td>Italy</td>
+		  </tr>
+		</table>
 		
 	</body>
 </html>
