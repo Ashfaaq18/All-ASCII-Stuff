@@ -89,33 +89,33 @@ p {
   }
 }
 
-/*
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  width: 100%;
+/* ------------------ ASCII Table -------------- */
+#ASCIItable {
+  font-family: Helvetica;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 50px auto 50px auto;
+  font-size:15px;
 }
 
-li {
-  float: left;
+#ASCIItable td, #ASCIItable th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-li a {
-  display: block;
-  color: white;
+#ASCIItable tr:nth-child(even){background-color: #303030;}
+
+#ASCIItable tr:hover {background-color: #663737;}
+
+#ASCIItable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  background-color: #c99457;
+  color: #291d12;
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+#ASCIItitle th {
+	text-align: center;
+	color: black;
 }
-
-.active {
-  background-color: rgb(194, 61, 37);
-}
-*/
