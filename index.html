@@ -5,6 +5,7 @@
 		<script src="resources/ASCIItable.js"></script> 
 		<script src="myScript.js"></script>
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<title>All ASCII Stuff</title>
 			
 			<h1>All ASCII Stuff</h1>
@@ -23,9 +24,16 @@
 	<body onload="
 	tableFromJson(ASCIIcontrolData, 'showControlData');
 	tableFromJson(ASCIIprintableData, 'showPrintableData');">
-		<h2> Control code ASCII</h2>
+		<p id="intro"> ASCII (American Standard Code for Information Interchange) is a character encoding standard for electronic communication.
+		It was developed from telegrah codes. The code represents a 7 bit character set.</p>
+		<h2> Usage </h2>
+		<p id="intro"> For windows/linux users: <br> 
+		Hold [ Alt + 0 + decimal value ] for the control code (holding [ Alt + decimal value ] only gives Alt codes in windows). <br>
+		Holding [ Alt + decimal value ] is enough for the printable codes.</p>
+		<p id="intro"> </p>
+		<h2> Control code ASCII </h2>
 		<p id="showControlData"></p>
-		<h2> Printable code ASCII</h2>
+		<h2> Printable code ASCII </h2>
 		<p id="showPrintableData"></p>
 	</body>
 

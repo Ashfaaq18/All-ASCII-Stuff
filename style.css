@@ -14,13 +14,22 @@ h1 {
 h2 {
 	color: rgb(202, 213, 226);
 	font-size:20px;
-	margin: 50px auto auto 70px;
+	width: 90%;
+	margin: 30px auto 0px auto;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
 
+#intro {
+	width: 90%;
+	margin: 30px auto 0px auto;
+}
+
 p {
 	color: rgb(202, 213, 226);
+	font-size:15px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 }
 
 /* Add a black background color to the top navigation */
