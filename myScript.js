@@ -1,20 +1,3 @@
-function mainTabs(a) {
-	
-	switch(a.href){
-        case "Table":
-            document.getElementById("content").innerHTML = "table content";
-            break;
-        case "Art":
-            document.getElementById("content").innerHTML = "art content";
-            break;
-        case "Draw":
-            document.getElementById("content").innerHTML = "draw content";
-            break;
-        default:
-            return false;
-	}
-}
-
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -95,3 +78,22 @@ function tableFromJson(JSONdata, elementID) {
 	divShowData.appendChild(table);
 	
  }
+ 
+ //----------- ASCII art ----------------------//
+
+function readImg(event){
+	
+	var selectedFile = event.target.files[0];
+	var reader = new FileReader();
+
+	var imgtag = document.getElementById("previewImage");
+	imgtag.title = selectedFile.name;
+
+	reader.onload = function(event) {
+	imgtag.src = event.target.result;
+	};
+
+	reader.readAsDataURL(selectedFile);
+	let ele = new imgToAscii('‪C:\Users\ASHFAAQ\Pictures\1.png');
+	ele.display();
+}

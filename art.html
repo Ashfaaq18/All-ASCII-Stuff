@@ -24,8 +24,15 @@
 	</head>
 	
 	<body>
-
-		<p id="content">art page</p>
+		<script src="resources/imgToAscii.js"></script>
+		<script>
+			let ele = new imgToAscii("resources/1.png");
+			ele.display();
+		</script>
+		<input type="file" id="srcImg" name="srcImg" onchange="readImg(event)">
+		<br>
+		<img id="previewImage" height="200">
+		<br>
 		
 	</body>
 </html>
