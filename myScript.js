@@ -94,6 +94,4 @@ function readImg(event){
 	};
 
 	reader.readAsDataURL(selectedFile);
-	let ele = new imgToAscii('‪C:\Users\ASHFAAQ\Pictures\1.png');
-	ele.display();
 }
