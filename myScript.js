@@ -78,18 +78,3 @@ function tableFromJson(JSONdata, elementID) {
 	divShowData.appendChild(table);
 	
  }
- 
- //----------- ASCII art ----------------------//
-
-function readImg(event){
-	var reader = new FileReader();
-    reader.readAsDataURL(document.getElementById("srcImg").files[0]);
-
-	reader.onload = function(readerEvent) {
-        document.getElementById("previewImage").src = readerEvent.target.result;
-        document.getElementById("imgDims").innerText = 
-						document.getElementById("previewImage").naturalWidth.toString() + 
-						" x " + 
-						document.getElementById("previewImage").naturalHeight.toString();
-    };
-}

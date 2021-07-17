@@ -36,10 +36,24 @@
 		( the bigger the image resolution and the smaller the Ascii width, the more unclear the Ascii output will look ) </p>
 		</div>
 		<br> 
-		<input type="file" id="srcImg" name="srcImg" class="commonMargin" style="color: rgb(202, 213, 226);" onchange="readImg(event)">
+		<input type="file" id="srcImg" name="srcImg" class="commonMargin" style="color: rgb(202, 213, 226);" onchange="readImg()">
 		<img id="previewImage" 
 		style="margin: 30px auto 0px auto;display: block; max-width:450px;max-height:450px;">
-		<p id="imgDims"></p>
+		<p id="imgDims" style="text-align:center;"></p>
+		<script>
+			const [input, img, imgDims] = 
+			  document.querySelectorAll('#srcImg, #previewImage, #imgDims')
+
+			img.onload = () => {
+				imgDims.innerText = `${img.naturalWidth} x ${img.naturalHeight}`
+			}
+
+			function readImg() {
+				img.src = URL.createObjectURL(input.files[0])
+				let ascii = new imgToAscii(img.src);
+				ascii.display(false);
+			}
+		</script>
 		<br>
 		<h2 style="text-align:center;"> ASCII Output </h2>
 		<div class="asciiContainer commonMargin">
