@@ -82,22 +82,14 @@ function tableFromJson(JSONdata, elementID) {
  //----------- ASCII art ----------------------//
 
 function readImg(event){
-	
-	var selectedFile = event.target.files[0];
 	var reader = new FileReader();
+    reader.readAsDataURL(document.getElementById("srcImg").files[0]);
 
-	var imgtag = document.getElementById("previewImage");
-	imgtag.title = selectedFile.name;
-
-	reader.onload = function(event) {
-						imgtag.src = event.target.result;
-						let ele = new imgToAscii(imgtag.src);
-						ele.display(false);
-						document.getElementById("imgDims").innerHTML = 
+	reader.onload = function(readerEvent) {
+        document.getElementById("previewImage").src = readerEvent.target.result;
+        document.getElementById("imgDims").innerText = 
 						document.getElementById("previewImage").naturalWidth.toString() + 
 						" x " + 
 						document.getElementById("previewImage").naturalHeight.toString();
-					};
-	
-	reader.readAsDataURL(selectedFile);
+    };
 }
