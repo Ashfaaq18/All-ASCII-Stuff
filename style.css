@@ -6,30 +6,47 @@ body {
 h1 {
 	color: rgb(255, 99, 71);
 	text-align: center;
-	font-size:30px;
+	font-size: 30px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 }
 
 h2 {
 	color: rgb(202, 213, 226);
-	font-size:20px;
-	width: 90%;
-	margin: 30px auto 0px auto;
+	font-size: 20px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
 
-#intro {
+.commonMargin{
 	width: 90%;
 	margin: 30px auto 0px auto;
+	display: block;
+}
+
+.noteOutline{
+	padding: 5px 5px 5px 10px;
+	outline-style: solid;
+	outline-color: rgb(255, 99, 71);
+	outline-width: 2px;
+}
+
+.asciiContainer{
+	outline-style: solid;
+	outline-color: rgb(255, 99, 71);
+	outline-width: 2px;
+	background-color: white;
+}
+
+.asciiContainer pre {
+	color: black;
 }
 
 p {
 	color: rgb(202, 213, 226);
-	font-size:15px;
+	font-size: 15px;
 	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
+	font-weight: 300; 
 }
 
 /* Add a black background color to the top navigation */

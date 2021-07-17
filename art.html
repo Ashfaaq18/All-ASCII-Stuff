@@ -2,8 +2,9 @@
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script type="text/javascript" 
-		src="https://cdn.jsdelivr.net/gh/Ashfaaq18/imgToAscii@7930273/src/imgToAscii.js"></script>
+		<!script type="text/javascript" 
+		src="https://cdn.jsdelivr.net/gh/Ashfaaq18/imgToAscii@7930273/src/imgToAscii.js"><!/script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Ashfaaq18/imgToAscii@outputInP/src/imgToAscii.js"></script>
 		<script src="myScript.js"></script>
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,14 +29,22 @@
 	
 	<body>
 		
-		<script>
-			let ele = new imgToAscii("resources/1.png");
-			ele.display();
-		</script>
-		<input type="file" id="srcImg" name="srcImg" onchange="readImg(event)">
+		<p class="commonMargin"> Generate ASCII Art from images by uploading here! </p>
+		<div class="noteOutline commonMargin">
+		<p> NOTE: </p>
+		<p> Ascii width: width of the generated Ascii art,
+		( the bigger the image resolution and the smaller the Ascii width, the more unclear the Ascii output will look ) </p>
+		</div>
+		<br> 
+		<input type="file" id="srcImg" name="srcImg" class="commonMargin" style="color: rgb(202, 213, 226);" onchange="readImg(event)">
+		<img id="previewImage" 
+		style="margin: 30px auto 0px auto;display: block; max-width:450px;max-height:450px;">
+		<p id="imgDims"></p>
 		<br>
-		<img id="previewImage" height="200">
-		<br>
+		<h2 style="text-align:center;"> ASCII Output </h2>
+		<div class="asciiContainer commonMargin">
+		<pre id="asciiOutput" style="width:100%;overflow:auto;" >asdjasd</pre>
+		</div>
 		
 	</body>
 </html>

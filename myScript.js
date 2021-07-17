@@ -90,8 +90,14 @@ function readImg(event){
 	imgtag.title = selectedFile.name;
 
 	reader.onload = function(event) {
-	imgtag.src = event.target.result;
-	};
-
+						imgtag.src = event.target.result;
+						let ele = new imgToAscii(imgtag.src);
+						ele.display(false);
+						document.getElementById("imgDims").innerHTML = 
+						document.getElementById("previewImage").naturalWidth.toString() + 
+						" x " + 
+						document.getElementById("previewImage").naturalHeight.toString();
+					};
+	
 	reader.readAsDataURL(selectedFile);
 }
