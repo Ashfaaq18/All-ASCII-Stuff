@@ -32,20 +32,24 @@
 		<p class="commonMargin"> Generate ASCII Art from images by uploading here! </p>
 		<div class="noteOutline commonMargin">
 		<p> NOTE: </p>
-		<p> Ascii width: width of the generated Ascii art,
-		( the bigger the image resolution and the smaller the Ascii width, the more unclear the Ascii output will look ) </p>
+		<p> Ascii output size: % size of the ascii output compared to the image resolution,
+		( the bigger the image resolution and the smaller the %, the more unclear the Ascii output will look ) </p>
 		</div>
 		<br>
-		<form class="commonMargin">
+		
+		<form class="commonMargin" onsubmit="event.preventDefault();">
 		
 			<input type="file" id="srcImg" name="srcImg" style="color: rgb(202, 213, 226);" onchange="readImg()"><br>
 			
 			<div class="font_s15w300" style="margin: 20px auto 0px auto;display: block;">
 				<label for="fname" >ASCII output size: </label>
-				<input type="number" id="asciiSize" name="asciiSize" min="1" max="100" style="width:auto"  value="50"> %</input><br>
+				<input type="number" id="asciiSize" name="asciiSize" min="1" max="100" 
+				style="width:auto"  value="50" onkeyup="asciiSizeSet(event)"> %<br>
+				<p id="inputTest">50</p>
 			</div>
 			
 		</form>
+		
 		<img id="previewImage" 
 		style="margin: 30px auto 0px auto;display: block; max-width:450px;max-height:450px;">
 		<p id="imgDims" style="text-align:center;"></p>
@@ -59,7 +63,7 @@
 
 			function readImg() {
 				img.src = URL.createObjectURL(input.files[0])
-				let ascii = new imgToAscii(img.src);
+				let ascii = new imgToAscii(img.src, asciiRatio);
 				ascii.display(false);
 			}
 		</script>
