@@ -35,8 +35,17 @@
 		<p> Ascii width: width of the generated Ascii art,
 		( the bigger the image resolution and the smaller the Ascii width, the more unclear the Ascii output will look ) </p>
 		</div>
-		<br> 
-		<input type="file" id="srcImg" name="srcImg" class="commonMargin" style="color: rgb(202, 213, 226);" onchange="readImg()">
+		<br>
+		<form class="commonMargin">
+		
+			<input type="file" id="srcImg" name="srcImg" style="color: rgb(202, 213, 226);" onchange="readImg()"><br>
+			
+			<div class="font_s15w300" style="margin: 20px auto 0px auto;display: block;">
+				<label for="fname" >ASCII output size: </label>
+				<input type="number" id="asciiSize" name="asciiSize" min="1" max="100" style="width:auto"  value="50"> %</input><br>
+			</div>
+			
+		</form>
 		<img id="previewImage" 
 		style="margin: 30px auto 0px auto;display: block; max-width:450px;max-height:450px;">
 		<p id="imgDims" style="text-align:center;"></p>
