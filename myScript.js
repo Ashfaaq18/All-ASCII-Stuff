@@ -8,7 +8,7 @@ function myFunction() {
   }
 }
 
-//ASCIIcontrolData 'showControlData'
+//ASCIIcontrolData and ASCIIprintData
 function tableFromJson(JSONdata, elementID) {
 	// the json data. (you can change the values for output.)
 	var ASCIIdata = JSONdata;
@@ -65,7 +65,7 @@ function tableFromJson(JSONdata, elementID) {
 			}
 			else{
 				tabCell.innerHTML = ASCIIdata[i][col[j]];
-				if( ((j+1)%3) != 0 ){
+				if( ((j+1)%4) != 0 ){
 				tabCell.style.textAlign = "center";
 				}
 			}
