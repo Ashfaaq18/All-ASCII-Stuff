@@ -12,7 +12,7 @@ function myFunction() {
 function tableFromJson(JSONdata, elementID) {
 	// the json data. (you can change the values for output.)
 	var ASCIIdata = JSONdata;
-
+	
 	// Extract value from table header. 
 	// ('Dec', 'Char', and 'Desc')
 	var col = [];
@@ -26,7 +26,7 @@ function tableFromJson(JSONdata, elementID) {
 
 	// Create a table.
 	var table = document.createElement("table");
-	table.id = "ASCIItable"
+	table.setAttribute('class', 'ASCIItable');
 	// Create table header row using the extracted headers above.
 	var tr = table.insertRow(-1);                   // table row.
 	

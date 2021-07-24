@@ -128,21 +128,25 @@ p {
     text-align: left;
   }
   
-  p {
-	font-size: 12px;
+  .ASCIItable tbody {
+	font-size: 13px;
   }
+  
+  p {
+	font-size: 14px; 
+  }
+    
 }
 
 /* ------------------ ASCII Table -------------- */
-#ASCIItable {
-  
+.ASCIItable {
   border-collapse: collapse;
   width: 90%;
   margin: 50px auto 50px auto;
   font-size:15px;
 }
 
-#ASCIItable th {
+.ASCIItable th {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	padding-top: 12px;
@@ -153,15 +157,16 @@ p {
 	color: #291d12;
 }
 
-#ASCIItable td{
+.ASCIItable td{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	border: 1px solid #ddd;
 	padding: 8px;
+	color: rgb(202, 213, 226);
 }
 
-#ASCIItable tr:nth-child(even){background-color: #303030;}
+.ASCIItable tr:nth-child(even){background-color: #303030;}
 
-#ASCIItable tr:hover {background-color: #663737;}
+.ASCIItable tr:hover {background-color: #663737;}
 
 
