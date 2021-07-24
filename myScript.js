@@ -68,6 +68,9 @@ function tableFromJson(JSONdata, elementID) {
 				if( ((j+1)%4) != 0 ){
 				tabCell.style.textAlign = "center";
 				}
+				else {
+				tabCell.style.textAlign = "left";
+				}
 			}
 		}
 	}
